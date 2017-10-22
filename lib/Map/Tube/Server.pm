@@ -98,7 +98,7 @@ get '/stations/:map' => sub {
 
 get '/maps' => sub {
     my $client   = request->address;
-    my $response = api->supported_maps($client);
+    my $response = api->available_maps($client);
 
     return res($response->{error_code} => $response->{error_message})
         if (exists $response->{error_code});
