@@ -17,11 +17,55 @@ use 5.006;
 use strict; use warnings;
 use Data::Dumper;
 
-use Dancer2;
+use Dancer2 appname => $ENV{MAP_APP_NAME};
 use Dancer2::Plugin::Res;
 use Dancer2::Plugin::Map::Tube;
 
 =head1 DESCRIPTION
+
+Dancer2 based framework to build the Map::Tube public facing  REST API. Currently
+it is being used by manwar.org to provide the service as REST API.It's still very
+much beta version v1.
+
+=head1 SUPPORTED MAPS
+
+The supported maps are defined in L<Dancer2::Plugin::Map::Tube>. You can override
+the list by providing the list in the app configuration file. The name of the app
+should be  set  to  environment  variable C<MAP_APP_NAME>. The configuration file
+should have something like below:
+
+    ...
+    ...
+
+    plugins:
+        "Map::Tube":
+            available_maps: [ "london", "delhi", "barcelon", "kolkatta" ]
+    ...
+    ...
+
+=over 2
+
+=item Map::Tube::London
+
+=item Map::Tube::Delhi
+
+=item Map::Tube::Barcelona
+
+=item Map::Tube::Kolkatta
+
+=back
+
+=head1 ERROR CODES
+
+=over 2
+
+=item 401 - Breached Threshold
+
+=item 402 - Missing map name
+
+=item 403 - Unsupported map
+
+=back
 
 =cut
 
@@ -33,7 +77,7 @@ hook before => sub {
 
 =head2 POST /map-tube/v1/shortest-route
 
-Request must have the following data:
+Request body must have the following data:
 
     +-------+-------------------------------------------+
     | Key   | Description                               |
@@ -44,6 +88,10 @@ Request must have the following data:
     +-------+-------------------------------------------+
 
 Returns ref to an array of shortest route stations list in JSON format.
+
+For example:
+
+    curl --data "map=london&start=Baker Street&end=Wembley Park" http://manwar.mooo.info/map-tube/v1/shortest-route
 
 =cut
 
@@ -62,6 +110,13 @@ post '/shortest-route' => sub {
 
 =head2 GET /map-tube/v1/stations/:map/:line
 
+Returns ref to an array of stations list  in JSON format for the given C<map> and
+C<line>. The C<map> can be any of the supported maps. And the  C<line> can be any
+of lines within the C<map>.For more details, please look into the relevant module
+for the map C<Map::Tube::*>.
+
+    curl http://manwar.mooo.info/map-tube/v1/stations/london/metropolitan
+
 =cut
 
 get '/stations/:map/:line' => sub {
@@ -79,6 +134,10 @@ get '/stations/:map/:line' => sub {
 
 =head2 GET /map-tube/v1/stations/:map
 
+Returns ref to an array of stations list in JSON format for the given C<map>.
+
+    curl http://manwar.mooo.info/map-tube/v1/stations/london
+
 =cut
 
 get '/stations/:map' => sub {
@@ -93,6 +152,10 @@ get '/stations/:map' => sub {
 };
 
 =head2 GET /map-tube/v1/maps
+
+Returns ref to an array of supported maps.
+
+    curl http://manwar.mooo.info/map-tube/v1/maps
 
 =cut
 
