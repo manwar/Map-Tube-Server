@@ -30,28 +30,93 @@ much beta version v1.
 =head1 SUPPORTED MAPS
 
 The supported maps are defined in L<Dancer2::Plugin::Map::Tube>. You can override
-the list by providing the list in the app configuration file. The name of the app
-should be  set  to  environment  variable C<MAP_APP_NAME>. The configuration file
-should have something like below:
+the list by  providing  the list in the app configuration file. The configuration
+should look like below:
 
     ...
     ...
 
     plugins:
         "Map::Tube":
-            available_maps: [ "london", "delhi", "barcelona", "kolkatta" ]
+            user_maps: [ "london", "delhi", "barcelona", "kolkatta" ]
     ...
     ...
 
 =over 2
 
-=item Map::Tube::London
+=item Map::Tube::Barcelona
+
+=item Map::Tube::Beijing
+
+=item Map::Tube::Berlin
+
+=item Map::Tube::Bucharest
+
+=item Map::Tube::Budapest
 
 =item Map::Tube::Delhi
 
-=item Map::Tube::Barcelona
+=item Map::Tube::Dnipropetrovsk
+
+=item Map::Tube::Glasgow
+
+=item Map::Tube::Kazan
+
+=item Map::Tube::Kharkiv
+
+=item Map::Tube::Kiev
+
+=item Map::Tube::KoelnBonn
 
 =item Map::Tube::Kolkatta
+
+=item Map::Tube::KualaLumpur
+
+=item Map::Tube::London
+
+=item Map::Tube::Lyon
+
+=item Map::Tube::Malaga
+
+=item Map::Tube::Minsk
+
+=item Map::Tube::Moscow
+
+=item Map::Tube::Nanjing
+
+=item Map::Tube::NizhnyNovgorod
+
+=item Map::Tube::Novosibirsk
+
+=item Map::Tube::Prague
+
+=item Map::Tube::SaintPetersburg
+
+=item Map::Tube::Samara
+
+=item Map::Tube::Singapore
+
+=item Map::Tube::Sofia
+
+=item Map::Tube::Tbilisi
+
+=item Map::Tube::Vienna
+
+=item Map::Tube::Warsaw
+
+=item Map::Tube::Yekaterinburg
+
+=back
+
+=head1 UNSUPPORTED MAPS
+
+The following maps do not have complete map data yet.
+
+=over 2
+
+=item Map::Tube::NYC
+
+=item Map::Tube::Tokyo
 
 =back
 
