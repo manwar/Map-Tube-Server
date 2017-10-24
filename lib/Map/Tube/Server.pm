@@ -17,7 +17,7 @@ use 5.006;
 use strict; use warnings;
 use Data::Dumper;
 
-use Dancer2 appname => $ENV{MAP_APP_NAME};
+use Dancer2;
 use Dancer2::Plugin::Res;
 use Dancer2::Plugin::Map::Tube;
 
@@ -39,7 +39,7 @@ should have something like below:
 
     plugins:
         "Map::Tube":
-            available_maps: [ "london", "delhi", "barcelon", "kolkatta" ]
+            available_maps: [ "london", "delhi", "barcelona", "kolkatta" ]
     ...
     ...
 
