@@ -120,15 +120,31 @@ The following maps do not have complete map data yet.
 
 =back
 
-=head1 ERROR CODES
+=head1 ERROR MESSAGES
 
 =over 2
 
-=item 401 - Breached Threshold
+=item REACHED REQUEST LIMIT
 
-=item 402 - Missing map name
+=item MISSING MAP NAME
 
-=item 403 - Unsupported map
+=item RECEIVED INVALID MAP NAME
+
+=item RECEIVED UNSUPPORTED MAP NAME
+
+=item MISSING START STATION NAME
+
+=item RECEIVED INVALID START STATION NAME
+
+=item MISSING END STATION NAME
+
+=item RECEIVED INVALID END STATION NAME
+
+=item MISSING LINE NAME
+
+=item RECEIVED INVALID LINE NAME
+
+=item MAP NOT INSTALLED
 
 =back
 
