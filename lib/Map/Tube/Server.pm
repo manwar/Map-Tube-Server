@@ -156,31 +156,23 @@ hook before => sub {
 
 =head1 ROUTES
 
-=head2 POST /map-tube/v1/shortest-route
+=head2 GET /map-tube/v1/shortest-route/:map/:start/:end
 
-Request body must have the following data:
-
-    +-------+-------------------------------------------+
-    | Key   | Description                               |
-    +-------+-------------------------------------------+
-    | name  | Map name e.g. London,Delhi,Barcelona etc. |
-    | start | Start station name.                       |
-    | end   | End station name.                         |
-    +-------+-------------------------------------------+
+Return the shortest route from C<$start> to C<$end> in the C<$map>.
 
 Returns ref to an array of shortest route stations list in JSON format.
 
 For example:
 
-    curl --data "map=london&start=Baker Street&end=Wembley Park" http://manwar.mooo.info/map-tube/v1/shortest-route
+    curl http://localhost/map-tube/v1/shortest-route/london/baker%20street/wembley%20park
 
 =cut
 
-post '/shortest-route' => sub {
+get '/shortest-route/:map/:start/:end' => sub {
     my $client   = request->address;
-    my $name     = body_parameters->get('map');
-    my $start    = body_parameters->get('start');
-    my $end      = body_parameters->get('end');
+    my $name     = route_parameters->get('map');
+    my $start    = route_parameters->get('start');
+    my $end      = route_parameters->get('end');
     my $response = api($name)->shortest_route($client, $start, $end);
 
     return res($response->{error_code} => $response->{error_message})
