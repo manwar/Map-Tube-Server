@@ -44,67 +44,67 @@ should look like below:
 
 =over 2
 
-=item Map::Tube::Barcelona
+=item Barcelona
 
-=item Map::Tube::Beijing
+=item Beijing
 
-=item Map::Tube::Berlin
+=item Berlin
 
-=item Map::Tube::Bucharest
+=item Bucharest
 
-=item Map::Tube::Budapest
+=item Budapest
 
-=item Map::Tube::Delhi
+=item Delhi
 
-=item Map::Tube::Dnipropetrovsk
+=item Dnipropetrovsk
 
-=item Map::Tube::Glasgow
+=item Glasgow
 
-=item Map::Tube::Kazan
+=item Kazan
 
-=item Map::Tube::Kharkiv
+=item Kharkiv
 
-=item Map::Tube::Kiev
+=item Kiev
 
-=item Map::Tube::KoelnBonn
+=item KoelnBonn
 
-=item Map::Tube::Kolkatta
+=item Kolkatta
 
-=item Map::Tube::KualaLumpur
+=item KualaLumpur
 
-=item Map::Tube::London
+=item London
 
-=item Map::Tube::Lyon
+=item Lyon
 
-=item Map::Tube::Malaga
+=item Malaga
 
-=item Map::Tube::Minsk
+=item Minsk
 
-=item Map::Tube::Moscow
+=item Moscow
 
-=item Map::Tube::Nanjing
+=item Nanjing
 
-=item Map::Tube::NizhnyNovgorod
+=item NizhnyNovgorod
 
-=item Map::Tube::Novosibirsk
+=item Novosibirsk
 
-=item Map::Tube::Prague
+=item Prague
 
-=item Map::Tube::SaintPetersburg
+=item SaintPetersburg
 
-=item Map::Tube::Samara
+=item Samara
 
-=item Map::Tube::Singapore
+=item Singapore
 
-=item Map::Tube::Sofia
+=item Sofia
 
-=item Map::Tube::Tbilisi
+=item Tbilisi
 
-=item Map::Tube::Vienna
+=item Vienna
 
-=item Map::Tube::Warsaw
+=item Warsaw
 
-=item Map::Tube::Yekaterinburg
+=item Yekaterinburg
 
 =back
 
