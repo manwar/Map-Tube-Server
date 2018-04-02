@@ -29,84 +29,7 @@ much beta version v1.
 
 =head1 SUPPORTED MAPS
 
-The supported maps are defined in L<Dancer2::Plugin::Map::Tube>. You can override
-the list by  providing  the list in the app configuration file. The configuration
-should look like below:
-
-    ...
-    ...
-
-    plugins:
-        "Map::Tube":
-            user_maps: [ "london", "delhi", "barcelona", "kolkatta" ]
-    ...
-    ...
-
-=over 2
-
-=item Barcelona
-
-=item Beijing
-
-=item Berlin
-
-=item Bucharest
-
-=item Budapest
-
-=item Delhi
-
-=item Dnipropetrovsk
-
-=item Glasgow
-
-=item Kazan
-
-=item Kharkiv
-
-=item Kiev
-
-=item KoelnBonn
-
-=item Kolkatta
-
-=item KualaLumpur
-
-=item London
-
-=item Lyon
-
-=item Malaga
-
-=item Minsk
-
-=item Moscow
-
-=item Nanjing
-
-=item NizhnyNovgorod
-
-=item Novosibirsk
-
-=item Prague
-
-=item SaintPetersburg
-
-=item Samara
-
-=item Singapore
-
-=item Sofia
-
-=item Tbilisi
-
-=item Vienna
-
-=item Warsaw
-
-=item Yekaterinburg
-
-=back
+The supported maps are defined in L<Dancer2::Plugin::Map::Tube>.
 
 =head1 UNSUPPORTED MAPS
 
@@ -164,7 +87,7 @@ Returns ref to an array of shortest route stations list in JSON format.
 
 For example:
 
-    curl http://localhost/map-tube/v1/shortest-route/london/baker%20street/wembley%20park
+    curl http://manwar.mooo.info/map-tube/v1/shortest-route/london/baker%20street/wembley%20park
 
 =cut
 
@@ -287,7 +210,7 @@ L<http://search.cpan.org/dist/Map-Tube-Server/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2017 Mohammad S Anwar.
+Copyright (C) 2018 Mohammad S Anwar.
 
 This program  is  free software; you can redistribute it and / or modify it under
 the  terms  of the the Artistic License (2.0). You may obtain  a copy of the full
