@@ -1,5 +1,8 @@
 Revision history for Map::Tube::Server
 
+0.04  2024-01-28
+      - Fixed pod typo.
+
 0.03  2024-01-28
       - Updated pod with regard to setup server and testing locally.
 

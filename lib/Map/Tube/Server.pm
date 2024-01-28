@@ -1,6 +1,6 @@
 package Map::Tube::Server;
 
-$Map::Tube::Server::VERSION   = '0.03';
+$Map::Tube::Server::VERSION   = '0.04';
 $Map::Tube::Server::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ Map::Tube::Server - Dancer2 based server for Map::Tube.
 
 =head1 VERSION
 
-Version 0.03
+Version 0.04
 
 =cut
 
@@ -27,12 +27,10 @@ Dancer2 based framework to build the L<Map::Tube> public  facing  REST API.
 Currently it is being used by L<https://manwar.org> to provide the service
 as REST API. It's still very much a beta version C<v1>.
 
-=head1 SUPPORTED MAPS
+=head1 SETUP
 
-The supported maps are defined in L<Dancer2::Plugin::Map::Tube>.
-
-You can install individual maps manually. For example, C<London Tube Map>
-, just intall the CPAN module L<Map::Tube::London>.
+You can install individual maps manually. For C<London Tube Map>, just install
+the CPAN module L<Map::Tube::London>.
 
 Now the server C<server.psgi> can be setup locally like below:
 
@@ -54,6 +52,10 @@ just one map C<London> installed on the server.
 
     $ curl http://127.0.0.1:5000/map-tube/v1/maps
     [ "London" ]
+
+=head1 SUPPORTED MAPS
+
+The supported maps are defined in L<Dancer2::Plugin::Map::Tube>.
 
 =head1 UNSUPPORTED MAPS
 
