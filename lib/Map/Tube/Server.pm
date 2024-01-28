@@ -1,6 +1,6 @@
 package Map::Tube::Server;
 
-$Map::Tube::Server::VERSION   = '0.04';
+$Map::Tube::Server::VERSION   = '0.05';
 $Map::Tube::Server::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ Map::Tube::Server - Dancer2 based server for Map::Tube.
 
 =head1 VERSION
 
-Version 0.04
+Version 0.05
 
 =cut
 
@@ -113,7 +113,7 @@ Returns ref to an array of shortest route stations list in JSON format.
 
 For example:
 
-    curl http://manwar.mooo.info/map-tube/v1/shortest-route/london/baker%20street/wembley%20park
+    curl http://127.0.0.1:5000/map-tube/v1/shortest-route/london/baker%20street/wembley%20park
 
 =cut
 
