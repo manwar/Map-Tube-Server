@@ -1,6 +1,6 @@
 package Map::Tube::Server;
 
-$Map::Tube::Server::VERSION   = '0.01';
+$Map::Tube::Server::VERSION   = '0.02';
 $Map::Tube::Server::AUTHORITY = 'cpan:MANWAR';
 
 =head1 NAME
@@ -9,7 +9,7 @@ Map::Tube::Server - Dancer2 based server for Map::Tube.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -74,7 +74,7 @@ The following maps do not have complete map data yet.
 =cut
 
 hook before => sub {
-    header 'Content-Type' => 'application/json';
+    response_header 'Content-Type' => 'application/json';
 };
 
 =head1 ROUTES
@@ -210,7 +210,7 @@ L<http://search.cpan.org/dist/Map-Tube-Server/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2018 Mohammad S Anwar.
+Copyright (C) 2024 Mohammad Sajid Anwar.
 
 This program  is  free software; you can redistribute it and / or modify it under
 the  terms  of the the Artistic License (2.0). You may obtain  a copy of the full
